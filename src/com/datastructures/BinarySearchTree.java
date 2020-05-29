@@ -22,12 +22,12 @@ public class BinarySearchTree <Key extends Comparable<Key>, Value>{
         root = put(root, key, value);
     }
     private Node put(Node node, Key key, Value value){
-        if(node == null) return new Node(key, value, 1);
+        if(node == null) return new Node(key, value, 1); // Base case: Insert when there is a null link.
         if(node.key.compareTo(key) < 0) node.left = put(node.left, key, value);
         if(node.key.compareTo(key) > 0) node.right = put(node.right, key, value);
         else node.value = value;
 
-        node.N = size(node.left) + size(node.right) + 1;
+        node.N = size(node.left) + size(node.right) + 1; // Invariant to keep track of size.
 
         return node;
     }
