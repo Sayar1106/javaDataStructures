@@ -68,4 +68,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/datastructures/BinarySearchTree.java</url>
+          <line>69</line>
+          <properties class="com.datastructures.BinarySearchTree" method="delete">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
 </project>

@@ -40,5 +40,32 @@ public class BinarySearchTree <Key extends Comparable<Key>, Value>{
         if(node.key.compareTo(key) > 0) return get(node.right, key);
         else return node.value;
     }
+    public Key max(){
+        Node max = max(root);
+        return max.key;
+    }
+    private Node max(Node node){
+        if(node.left == null) return node;
+        return max(node.left);
+    }
+    public Key min(){
+        Node min = min(root);
+        return min.key;
+    }
+    private Node min(Node node) {
+        if (node.right == null) return node;
+        return max(node.right);
+    }
+    public Key floor(Key key){
+        Node floor = floor(root, key);
+        if(floor == null) return null;
+        return floor.key;
+    }
+    private Node floor(Node node, Key key){
+        if(node == null) return null;
+        if(node.key.compareTo(key) == 0) return node;
+        if(node.key.compareTo(key) < 0) return floor(node.left, key);
+        if(node.key.compareTo(key) > 0);
+    }
     public Value delete(Key key){}
 }
