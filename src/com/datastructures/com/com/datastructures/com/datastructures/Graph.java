@@ -8,10 +8,10 @@ class Node{
     }
 }
 
-public class NodeGraph{
+public class Graph{
     private int V;
-    private LinkedList<Node> adj[];
-    public NodeGraph(int v){
+    private List<Node>[] adj;
+    public Graph(int v){
         this.V = v;
         this.adj = new LinkedList[v];
         for(int i = 0; i < V; i++){
@@ -39,12 +39,11 @@ public class NodeGraph{
         }
     }
     public static void main(String args[]){
-        NodeGraph graph = new NodeGraph(3);
+        Graph graph = new Graph(3);
         Node zero = new Node(0);
         Node one = new Node(1);
         Node two = new Node(2);
         graph.addEdge(one, two);
         graph.addEdge(one, zero);
-        graph.DFS(one);
     }
 }

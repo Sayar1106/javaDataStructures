@@ -33,9 +33,27 @@ public class Graph {
 
     void DFS(int v){
         // This array marks all vertices as not visited
-        boolean[] visited = new boolean[V];
+        boolean visited[] = new boolean[V];
         // Call the helper function
         DFSUtil(v, visited);
+    }
+
+    void BFS(int v){
+        boolean visited[] = new boolean[V];
+        Queue<Integer> queue = new LinkedList();
+        queue.add(v);
+        while(!queue.isEmpty()){
+            int curr = queue.remove();
+            visited[curr] = true;
+            System.out.println(curr + " ");
+            Iterator<Integer> i = adj[curr].listIterator();
+            while(i.hasNext()){
+                int next = i.next();
+                if(!visited[next]){
+                    queue.add(next);
+                }
+            }
+        }
     }
     public static void main(String args[]) 
     { 
