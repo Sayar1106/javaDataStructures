@@ -18,6 +18,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     public RandomizedQueue() {
         arr = (Item[]) new Object[1];
         N = 0;
+
     }
 
     // is the randomized queue empty?
